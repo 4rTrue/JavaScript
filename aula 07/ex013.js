@@ -5,7 +5,6 @@ Domingo = 0
 ...
 Sábado = 6
 */
-
 switch (diaSem) {
     case 0:
         console.log('Domingo')                
