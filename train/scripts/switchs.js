@@ -1,5 +1,6 @@
 var id = 5
 var name = 'Arthur'
+var password = 'beans'
 
 switch(id){
     case 1:
@@ -16,6 +17,6 @@ switch(id){
         break
 }
 
-if (name == 'Felipe'){
+if (name == 'Felipe' && password == 'beans'){
     console.log('welcome')
 }
