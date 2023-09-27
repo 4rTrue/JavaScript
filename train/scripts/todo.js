@@ -1,4 +1,5 @@
 function inserirElemento(){
+    
     // capturando valor
     let input = window.document.getElementById('new-element')
     let text = input.value
@@ -6,9 +7,10 @@ function inserirElemento(){
     // teste lógico para inserir texto 
     if (text != '') {
         let container = window.document.getElementById('container')
-        let p = document.createElement('p')
-        p.innerText = text
-        container.appendChild(p)
+        let div = document.createElement('div')
+        div.className = 'element'
+        div.innerText = text
+        container.appendChild(div)
     }
     console.log(input.value)
 }
