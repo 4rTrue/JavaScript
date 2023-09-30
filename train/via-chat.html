@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Minha Lista de Tarefas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #todo-list {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        #todo-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #todo-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        #todo-list input[type="checkbox"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="todo-list">
+        <h1>Minha Lista de Tarefas</h1>
+        <ul id="tasks">
+            <!-- Tarefas serão adicionadas aqui via JavaScript -->
+        </ul>
+        <input type="text" id="new-task" placeholder="Adicione uma tarefa">
+        <button onclick="addTask()">Adicionar</button>
+    </div>
+
+    <script>
+        function addTask() {
+            const taskText = document.getElementById("new-task").value;
+            if (taskText.trim() === "") {
+                alert("Por favor, insira uma tarefa válida.");
+                return;
+            }
+
+            const taskList = document.getElementById("tasks");
+            const listItem = document.createElement("li");
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            const taskLabel = document.createElement("label");
+            taskLabel.textContent = taskText;
+
+            listItem.appendChild(checkbox);
+            listItem.appendChild(taskLabel);
+            taskList.appendChild(listItem);
+
+            document.getElementById("new-task").value = ""; // Limpar o campo de entrada
+        }
+    </script>
+</body>
+
+</html>
